@@ -2,6 +2,10 @@
 # Secrets
 .env
 .streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+.env.txt
 
 # Python
 __pycache__/
