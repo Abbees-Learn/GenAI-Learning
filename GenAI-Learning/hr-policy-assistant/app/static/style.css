@@ -1,0 +1,288 @@
+
+:root {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #1f2937;
+    background: #f3f6fb;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+button,
+textarea {
+    font: inherit;
+}
+
+.app {
+    width: 100%;
+    max-width: 900px;
+    min-height: 85vh;
+    height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px #1725540d;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 26px;
+    color: white;
+    background: #176b57;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #ffffff20;
+    font-weight: 800;
+}
+
+.header h1 {
+    margin: 0 0 5px;
+    font-size: 21px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.status-badge {
+    margin-left: auto;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.welcome {
+    padding: 42px 24px 24px;
+    text-align: center;
+}
+
+.welcome-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 14px;
+    border-radius: 16px;
+    background: #e4f3ec;
+    color: #176b57;
+    font-size: 28px;
+}
+
+.welcome h2 {
+    margin: 0 0 10px;
+    font-size: 23px;
+}
+
+.welcome p {
+    margin: 0 auto;
+    max-width: 500px;
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.suggestion {
+    border: 1px solid #dce5e2;
+    background: white;
+    color: #176b57;
+    padding: 11px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.suggestion:hover {
+    background: #edf7f2;
+}
+
+.chat-messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 10px 24px 24px;
+}
+
+.message {
+    max-width: 82%;
+    margin: 12px 0;
+    padding: 14px 16px;
+    border-radius: 14px;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.message.user {
+    margin-left: auto;
+    background: #176b57;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.assistant {
+    margin-right: auto;
+    background: #f1f4f7;
+    border-bottom-left-radius: 4px;
+}
+
+.sources {
+    margin-top: 12px;
+    border-top: 1px solid #dbe2e8;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.sources summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #176b57;
+}
+
+.source-item {
+    margin-top: 12px;
+    color: #4b5563;
+    overflow-wrap: anywhere;
+}
+
+.source-item p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.status-message {
+    padding: 0 24px 10px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.composer {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 14px 18px;
+    margin: 0 18px;
+    border: 1px solid #d9e1e8;
+    border-radius: 16px;
+    background: white;
+}
+
+.composer:focus-within {
+    border-color: #176b57;
+    box-shadow: 0 0 0 3px #176b5714;
+}
+
+.composer textarea {
+    flex: 1;
+    min-width: 0;
+    max-height: 140px;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 8px 2px;
+    line-height: 1.5;
+    background: transparent;
+}
+
+.composer button {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background: #176b57;
+    cursor: pointer;
+}
+
+.composer button:hover {
+    background: #105442;
+}
+
+.composer button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+footer {
+    padding: 14px 20px 18px;
+    text-align: center;
+    color: #7b8491;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .app {
+        height: 100dvh;
+        min-height: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .header {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .status-badge {
+        font-size: 10px;
+    }
+
+    .welcome {
+        padding: 28px 16px 12px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+
+    .chat-messages {
+        padding: 8px 14px 18px;
+    }
+
+    .message {
+        max-width: 94%;
+    }
+
+    .composer {
+        margin: 0 10px;
+        padding: 10px;
+    }
+}

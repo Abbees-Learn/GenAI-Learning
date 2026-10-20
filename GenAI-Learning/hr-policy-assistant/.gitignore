@@ -1,0 +1,28 @@
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Private documents and generated indexes
+documents/*
+!documents/.gitkeep
+*.faiss
+*.index
+
+# Tests and tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

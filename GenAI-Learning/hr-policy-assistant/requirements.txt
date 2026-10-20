@@ -1,0 +1,12 @@
+
+fastapi
+uvicorn[standard]
+PyPDF2
+sentence-transformers
+scikit-learn
+faiss-cpu
+numpy
+openai
+python-dotenv
+pydantic
+google-genai
