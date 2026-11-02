@@ -14,11 +14,11 @@ __pycache__/
 .venv/
 venv/
 
-# Private documents and generated indexes
-documents/*
-!documents/.gitkeep
-*.faiss
-*.index
+# # Private documents and generated indexes
+# documents/*
+# !documents/.gitkeep
+# *.faiss
+# *.index
 
 # Tests and tooling
 .pytest_cache/
